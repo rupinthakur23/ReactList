@@ -6,9 +6,10 @@ import * as serviceWorker from "./serviceWorker";
 
 import { Provider } from "react-redux";
 import { createStore } from "redux";
-import UserReducer from "./store/reducers/userReducer";
+// import UserReducer from "./store/reducers/userReducer";
+import notificationReducer from "./store/reducers/notificationReducer"
 
-const store = createStore(UserReducer);
+const store = createStore(notificationReducer);
 
 ReactDOM.render(
   <React.StrictMode>

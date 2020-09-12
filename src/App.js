@@ -8,7 +8,7 @@ import Home from './components/Home'
 import About from './components/About'
 import Contact from './components/Contact'
 import Post from "./components/Post"
-
+import Notification from './components/Notification'
 class App extends Component {
   state = {
     todos: [
@@ -43,7 +43,9 @@ class App extends Component {
       <Route exact path='/' component={Home}/>
       <Route path='/about' component={About}/>
       <Route path='/contact' component={Contact}/>
+      <Route path='/notification' component={Notification} />
       <Route path='/:post_id' component={Post} />
+      
       </Switch>
       <h1 className="center blue-text"> Todo's</h1>
       <Todos todos={this.state.todos} deleteTodo={this.deleteTodo} />
