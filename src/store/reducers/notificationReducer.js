@@ -1,18 +1,16 @@
 const initialState = {
-    bag:"diesel"
-}
+  items: [],
+};
 
-const notificationReducer = (state=initialState,action) =>{
-    if (action.type === "INC_BAG") {
-        return {
-          ...state,
-        
-        };
-      }
+const notificationReducer = (state = initialState, action) => {
+  if (action.type === "ADD_ITEM") {
+    return {
+      ...state,
+      items: state.items.concat(action.value),
+    };
+  }
 
-    return state
-}
+  return state;
+};
 
-
-
-export default notificationReducer
+export default notificationReducer;
